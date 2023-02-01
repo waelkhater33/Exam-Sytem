@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBcSharpProjectVersion1ModelStoreContainer" CdmEntityContainer="DBcSharpProjectVersion1Entities2">
+    <EntitySetMapping Name="AllowanceOptions">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.AllowanceOption">
+        <MappingFragment StoreEntitySet="AllowanceOptions">
+          <ScalarProperty Name="allowanceOption_id" ColumnName="allowanceOption_id" />
+          <ScalarProperty Name="allowanceOption_name" ColumnName="allowanceOption_name" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Cours">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="course_name" ColumnName="course_name" />
+          <ScalarProperty Name="min_deg" ColumnName="min_deg" />
+          <ScalarProperty Name="max_deg" ColumnName="max_deg" />
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamQuestionsChoices">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.ExamQuestionsChoice">
+        <MappingFragment StoreEntitySet="ExamQuestionsChoices">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="option3" ColumnName="option3" />
+          <ScalarProperty Name="option4" ColumnName="option4" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamQuestionsTexts">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.ExamQuestionsText">
+        <MappingFragment StoreEntitySet="ExamQuestionsTexts">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="answerText" ColumnName="answerText" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="StudentanswerText" ColumnName="StudentanswerText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamQuestionsTFs">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.ExamQuestionsTF">
+        <MappingFragment StoreEntitySet="ExamQuestionsTFs">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="answerTF" ColumnName="answerTF" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="StudentanswerTf" ColumnName="StudentanswerTf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exams">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Exam">
+        <MappingFragment StoreEntitySet="Exams">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="exam_type" ColumnName="exam_type" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="totalTime" ColumnName="totalTime" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="intake_id" ColumnName="intake_id" />
+          <ScalarProperty Name="track_id" ColumnName="track_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamsLips">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.ExamsLip">
+        <MappingFragment StoreEntitySet="ExamsLips">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="course_name" ColumnName="course_name" />
+          <ScalarProperty Name="instructor_name" ColumnName="instructor_name" />
+          <ScalarProperty Name="exams_year" ColumnName="exams_year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Instructor">
+        <MappingFragment StoreEntitySet="Instructors">
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+          <ScalarProperty Name="instructor_f_n" ColumnName="instructor_f_n" />
+          <ScalarProperty Name="instructor_l_n" ColumnName="instructor_l_n" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="manager_ID" ColumnName="manager_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Intakes">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Intake">
+        <MappingFragment StoreEntitySet="Intakes">
+          <ScalarProperty Name="intake_id" ColumnName="intake_id" />
+          <ScalarProperty Name="intake_number" ColumnName="intake_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionstChoices">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.QuestionstChoice">
+        <MappingFragment StoreEntitySet="QuestionstChoices">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="option3" ColumnName="option3" />
+          <ScalarProperty Name="option4" ColumnName="option4" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionstTexts">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.QuestionstText">
+        <MappingFragment StoreEntitySet="QuestionstTexts">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionstTFs">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.QuestionstTF">
+        <MappingFragment StoreEntitySet="QuestionstTFs">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="question_des" ColumnName="question_des" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAnswers">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.StudentAnswer">
+        <MappingFragment StoreEntitySet="StudentAnswers">
+          <ScalarProperty Name="studentAnswer_id" ColumnName="studentAnswer_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="resultC" ColumnName="resultC" />
+          <ScalarProperty Name="resultTF" ColumnName="resultTF" />
+          <ScalarProperty Name="resultText" ColumnName="resultText" />
+          <ScalarProperty Name="exam_degree" ColumnName="exam_degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAnswerSheets">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.StudentAnswerSheet">
+        <MappingFragment StoreEntitySet="StudentAnswerSheets">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="Student_id" ColumnName="Student_id" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="Answers" ColumnName="Answers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="student_fn" ColumnName="student_fn" />
+          <ScalarProperty Name="student_ln" ColumnName="student_ln" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="intake_id" ColumnName="intake_id" />
+          <ScalarProperty Name="track_id" ColumnName="track_id" />
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tracks">
+      <EntityTypeMapping TypeName="DBcSharpProjectVersion1Model.Track">
+        <MappingFragment StoreEntitySet="Tracks">
+          <ScalarProperty Name="track_id" ColumnName="track_id" />
+          <ScalarProperty Name="track_name" ColumnName="track_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

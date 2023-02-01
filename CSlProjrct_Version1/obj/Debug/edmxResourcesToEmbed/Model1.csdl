@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBcSharpProjectVersion1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AllowanceOption">
+    <Key>
+      <PropertyRef Name="allowanceOption_id" />
+    </Key>
+    <Property Name="allowanceOption_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="allowanceOption_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option1" Type="Boolean" />
+    <Property Name="option2" Type="Boolean" />
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_AllowanceOptions_dbo_Exams_exam_id" FromRole="AllowanceOptions" ToRole="Exams" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="branch_id" />
+    </Key>
+    <Property Name="branch_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="branch_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exams" Relationship="Self.FK_dbo_Exams_dbo_Branches_branch_id" FromRole="Branches" ToRole="Exams" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Branches_branch_id" FromRole="Branches" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="course_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="min_deg" Type="Int32" />
+    <Property Name="max_deg" Type="Int32" />
+    <Property Name="instructor_id" Type="Int32" />
+    <NavigationProperty Name="Instructor" Relationship="Self.FK_dbo_Courses_dbo_Instructors_instructor_id" FromRole="Courses" ToRole="Instructors" />
+    <NavigationProperty Name="Exams" Relationship="Self.FK_dbo_Exams_dbo_Courses_course_id" FromRole="Courses" ToRole="Exams" />
+    <NavigationProperty Name="QuestionstChoices" Relationship="Self.FK_dbo_QuestionstChoices_dbo_Courses_course_id" FromRole="Courses" ToRole="QuestionstChoices" />
+    <NavigationProperty Name="QuestionstTexts" Relationship="Self.FK_dbo_QuestionstTexts_dbo_Courses_course_id" FromRole="Courses" ToRole="QuestionstTexts" />
+    <NavigationProperty Name="QuestionstTFs" Relationship="Self.FK_dbo_QuestionstTFs_dbo_Courses_course_id" FromRole="Courses" ToRole="QuestionstTFs" />
+    <NavigationProperty Name="StudentAnswers" Relationship="Self.FK_dbo_StudentAnswers_dbo_Courses_course_id" FromRole="Courses" ToRole="StudentAnswers" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Courses_course_id" FromRole="Courses" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="ExamQuestionsChoice">
+    <Key>
+      <PropertyRef Name="exam_id" />
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="degree" Type="Int32" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_ExamQuestionsChoices_dbo_Exams_exam_id" FromRole="ExamQuestionsChoices" ToRole="Exams" />
+  </EntityType>
+  <EntityType Name="ExamQuestionsText">
+    <Key>
+      <PropertyRef Name="exam_id" />
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="degree" Type="Int32" />
+    <Property Name="StudentanswerText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_ExamQuestionsTexts_dbo_Exams_exam_id" FromRole="ExamQuestionsTexts" ToRole="Exams" />
+  </EntityType>
+  <EntityType Name="ExamQuestionsTF">
+    <Key>
+      <PropertyRef Name="exam_id" />
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answerTF" Type="Boolean" Nullable="false" />
+    <Property Name="degree" Type="Int32" />
+    <Property Name="StudentanswerTf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_ExamQuestionsTFs_dbo_Exams_exam_id" FromRole="ExamQuestionsTFs" ToRole="Exams" />
+  </EntityType>
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="exam_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exam_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="startTime" Type="DateTime" Precision="3" />
+    <Property Name="endTime" Type="DateTime" Precision="3" />
+    <Property Name="totalTime" Type="Time" Precision="7" />
+    <Property Name="course_id" Type="Int32" Nullable="false" />
+    <Property Name="instructor_id" Type="Int32" Nullable="false" />
+    <Property Name="branch_id" Type="Int32" Nullable="false" />
+    <Property Name="intake_id" Type="Int32" Nullable="false" />
+    <Property Name="track_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AllowanceOptions" Relationship="Self.FK_dbo_AllowanceOptions_dbo_Exams_exam_id" FromRole="Exams" ToRole="AllowanceOptions" />
+    <NavigationProperty Name="Branch" Relationship="Self.FK_dbo_Exams_dbo_Branches_branch_id" FromRole="Exams" ToRole="Branches" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_Exams_dbo_Courses_course_id" FromRole="Exams" ToRole="Courses" />
+    <NavigationProperty Name="ExamQuestionsChoices" Relationship="Self.FK_dbo_ExamQuestionsChoices_dbo_Exams_exam_id" FromRole="Exams" ToRole="ExamQuestionsChoices" />
+    <NavigationProperty Name="ExamQuestionsTexts" Relationship="Self.FK_dbo_ExamQuestionsTexts_dbo_Exams_exam_id" FromRole="Exams" ToRole="ExamQuestionsTexts" />
+    <NavigationProperty Name="ExamQuestionsTFs" Relationship="Self.FK_dbo_ExamQuestionsTFs_dbo_Exams_exam_id" FromRole="Exams" ToRole="ExamQuestionsTFs" />
+    <NavigationProperty Name="Instructor" Relationship="Self.FK_dbo_Exams_dbo_Instructors_instructor_id" FromRole="Exams" ToRole="Instructors" />
+    <NavigationProperty Name="Intake" Relationship="Self.FK_dbo_Exams_dbo_Intakes_intake_id" FromRole="Exams" ToRole="Intakes" />
+    <NavigationProperty Name="Track" Relationship="Self.FK_dbo_Exams_dbo_Tracks_track_id" FromRole="Exams" ToRole="Tracks" />
+    <NavigationProperty Name="StudentAnswers" Relationship="Self.FK_dbo_StudentAnswers_dbo_Exams_exam_id" FromRole="Exams" ToRole="StudentAnswers" />
+    <NavigationProperty Name="StudentAnswerSheets" Relationship="Self.FK_dbo_StudentAnswerSheets_dbo_Exams_exam_id" FromRole="Exams" ToRole="StudentAnswerSheets" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Exams_exam_id" FromRole="Exams" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="ExamsLip">
+    <Key>
+      <PropertyRef Name="exam_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="course_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="instructor_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="exams_year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="instructor_id" />
+    </Key>
+    <Property Name="instructor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="instructor_f_n" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="instructor_l_n" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="manager_ID" Type="Int32" />
+    <NavigationProperty Name="Courses" Relationship="Self.FK_dbo_Courses_dbo_Instructors_instructor_id" FromRole="Instructors" ToRole="Courses" />
+    <NavigationProperty Name="Exams" Relationship="Self.FK_dbo_Exams_dbo_Instructors_instructor_id" FromRole="Instructors" ToRole="Exams" />
+  </EntityType>
+  <EntityType Name="Intake">
+    <Key>
+      <PropertyRef Name="intake_id" />
+    </Key>
+    <Property Name="intake_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="intake_number" Type="Int32" />
+    <NavigationProperty Name="Exams" Relationship="Self.FK_dbo_Exams_dbo_Intakes_intake_id" FromRole="Intakes" ToRole="Exams" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Intakes_intake_id" FromRole="Intakes" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="QuestionstChoice">
+    <Key>
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="option4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="course_id" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_QuestionstChoices_dbo_Courses_course_id" FromRole="QuestionstChoices" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="QuestionstText">
+    <Key>
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="course_id" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_QuestionstTexts_dbo_Courses_course_id" FromRole="QuestionstTexts" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="QuestionstTF">
+    <Key>
+      <PropertyRef Name="question_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="question_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answer" Type="Boolean" />
+    <Property Name="course_id" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_QuestionstTFs_dbo_Courses_course_id" FromRole="QuestionstTFs" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="StudentAnswer">
+    <Key>
+      <PropertyRef Name="studentAnswer_id" />
+    </Key>
+    <Property Name="studentAnswer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_id" Type="Int32" />
+    <Property Name="exam_id" Type="Int32" />
+    <Property Name="course_id" Type="Int32" />
+    <Property Name="result" Type="Int32" />
+    <Property Name="resultC" Type="Int32" />
+    <Property Name="resultTF" Type="Int32" />
+    <Property Name="resultText" Type="Int32" />
+    <Property Name="exam_degree" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_StudentAnswers_dbo_Courses_course_id" FromRole="StudentAnswers" ToRole="Courses" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_StudentAnswers_dbo_Exams_exam_id" FromRole="StudentAnswers" ToRole="Exams" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_dbo_StudentAnswers_dbo_Students_student_id" FromRole="StudentAnswers" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="StudentAnswerSheet">
+    <Key>
+      <PropertyRef Name="exam_id" />
+      <PropertyRef Name="Student_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <Property Name="Student_id" Type="Int32" Nullable="false" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="degree" Type="Int32" Nullable="false" />
+    <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Answers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_StudentAnswerSheets_dbo_Exams_exam_id" FromRole="StudentAnswerSheets" ToRole="Exams" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_dbo_StudentAnswerSheets_dbo_Students_Student_id" FromRole="StudentAnswerSheets" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_fn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="student_ln" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="branch_id" Type="Int32" />
+    <Property Name="intake_id" Type="Int32" />
+    <Property Name="track_id" Type="Int32" />
+    <Property Name="exam_id" Type="Int32" />
+    <Property Name="course_id" Type="Int32" />
+    <NavigationProperty Name="Branch" Relationship="Self.FK_dbo_Students_dbo_Branches_branch_id" FromRole="Students" ToRole="Branches" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK_dbo_Students_dbo_Courses_course_id" FromRole="Students" ToRole="Courses" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_dbo_Students_dbo_Exams_exam_id" FromRole="Students" ToRole="Exams" />
+    <NavigationProperty Name="Intake" Relationship="Self.FK_dbo_Students_dbo_Intakes_intake_id" FromRole="Students" ToRole="Intakes" />
+    <NavigationProperty Name="StudentAnswers" Relationship="Self.FK_dbo_StudentAnswers_dbo_Students_student_id" FromRole="Students" ToRole="StudentAnswers" />
+    <NavigationProperty Name="StudentAnswerSheets" Relationship="Self.FK_dbo_StudentAnswerSheets_dbo_Students_Student_id" FromRole="Students" ToRole="StudentAnswerSheets" />
+    <NavigationProperty Name="Track" Relationship="Self.FK_dbo_Students_dbo_Tracks_track_id" FromRole="Students" ToRole="Tracks" />
+  </EntityType>
+  <EntityType Name="Track">
+    <Key>
+      <PropertyRef Name="track_id" />
+    </Key>
+    <Property Name="track_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="track_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exams" Relationship="Self.FK_dbo_Exams_dbo_Tracks_track_id" FromRole="Tracks" ToRole="Exams" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Tracks_track_id" FromRole="Tracks" ToRole="Students" />
+  </EntityType>
+  <Association Name="FK_dbo_AllowanceOptions_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AllowanceOptions" Type="Self.AllowanceOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="AllowanceOptions">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Exams_dbo_Branches_branch_id">
+    <End Role="Branches" Type="Self.Branch" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Exams" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="branch_id" />
+      </Principal>
+      <Dependent Role="Exams">
+        <PropertyRef Name="branch_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Branches_branch_id">
+    <End Role="Branches" Type="Self.Branch" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="branch_id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="branch_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Courses_dbo_Instructors_instructor_id">
+    <End Role="Instructors" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructors">
+        <PropertyRef Name="instructor_id" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="instructor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Exams_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Exams" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="Exams">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_QuestionstChoices_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="QuestionstChoices" Type="Self.QuestionstChoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="QuestionstChoices">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_QuestionstTexts_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="QuestionstTexts" Type="Self.QuestionstText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="QuestionstTexts">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_QuestionstTFs_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="QuestionstTFs" Type="Self.QuestionstTF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="QuestionstTFs">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_StudentAnswers_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="StudentAnswers" Type="Self.StudentAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="StudentAnswers">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Courses_course_id">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="course_id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ExamQuestionsChoices_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExamQuestionsChoices" Type="Self.ExamQuestionsChoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="ExamQuestionsChoices">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ExamQuestionsTexts_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExamQuestionsTexts" Type="Self.ExamQuestionsText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="ExamQuestionsTexts">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ExamQuestionsTFs_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExamQuestionsTFs" Type="Self.ExamQuestionsTF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="ExamQuestionsTFs">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Exams_dbo_Instructors_instructor_id">
+    <End Role="Instructors" Type="Self.Instructor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Exams" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructors">
+        <PropertyRef Name="instructor_id" />
+      </Principal>
+      <Dependent Role="Exams">
+        <PropertyRef Name="instructor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Exams_dbo_Intakes_intake_id">
+    <End Role="Intakes" Type="Self.Intake" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Exams" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Intakes">
+        <PropertyRef Name="intake_id" />
+      </Principal>
+      <Dependent Role="Exams">
+        <PropertyRef Name="intake_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Exams_dbo_Tracks_track_id">
+    <End Role="Tracks" Type="Self.Track" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Exams" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tracks">
+        <PropertyRef Name="track_id" />
+      </Principal>
+      <Dependent Role="Exams">
+        <PropertyRef Name="track_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_StudentAnswers_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="0..1" />
+    <End Role="StudentAnswers" Type="Self.StudentAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="StudentAnswers">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_StudentAnswerSheets_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StudentAnswerSheets" Type="Self.StudentAnswerSheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="StudentAnswerSheets">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Exams_exam_id">
+    <End Role="Exams" Type="Self.Exam" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exams">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Intakes_intake_id">
+    <End Role="Intakes" Type="Self.Intake" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Intakes">
+        <PropertyRef Name="intake_id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="intake_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_StudentAnswers_dbo_Students_student_id">
+    <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentAnswers" Type="Self.StudentAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="StudentAnswers">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_StudentAnswerSheets_dbo_Students_Student_id">
+    <End Role="Students" Type="Self.Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StudentAnswerSheets" Type="Self.StudentAnswerSheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="StudentAnswerSheets">
+        <PropertyRef Name="Student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Tracks_track_id">
+    <End Role="Tracks" Type="Self.Track" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tracks">
+        <PropertyRef Name="track_id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="track_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBcSharpProjectVersion1Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AllowanceOptions" EntityType="Self.AllowanceOption" />
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="Courses" EntityType="Self.Cours" />
+    <EntitySet Name="ExamQuestionsChoices" EntityType="Self.ExamQuestionsChoice" />
+    <EntitySet Name="ExamQuestionsTexts" EntityType="Self.ExamQuestionsText" />
+    <EntitySet Name="ExamQuestionsTFs" EntityType="Self.ExamQuestionsTF" />
+    <EntitySet Name="Exams" EntityType="Self.Exam" />
+    <EntitySet Name="ExamsLips" EntityType="Self.ExamsLip" />
+    <EntitySet Name="Instructors" EntityType="Self.Instructor" />
+    <EntitySet Name="Intakes" EntityType="Self.Intake" />
+    <EntitySet Name="QuestionstChoices" EntityType="Self.QuestionstChoice" />
+    <EntitySet Name="QuestionstTexts" EntityType="Self.QuestionstText" />
+    <EntitySet Name="QuestionstTFs" EntityType="Self.QuestionstTF" />
+    <EntitySet Name="StudentAnswers" EntityType="Self.StudentAnswer" />
+    <EntitySet Name="StudentAnswerSheets" EntityType="Self.StudentAnswerSheet" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Tracks" EntityType="Self.Track" />
+    <AssociationSet Name="FK_dbo_AllowanceOptions_dbo_Exams_exam_id" Association="Self.FK_dbo_AllowanceOptions_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="AllowanceOptions" EntitySet="AllowanceOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Exams_dbo_Branches_branch_id" Association="Self.FK_dbo_Exams_dbo_Branches_branch_id">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="Exams" EntitySet="Exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Branches_branch_id" Association="Self.FK_dbo_Students_dbo_Branches_branch_id">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Courses_dbo_Instructors_instructor_id" Association="Self.FK_dbo_Courses_dbo_Instructors_instructor_id">
+      <End Role="Instructors" EntitySet="Instructors" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Exams_dbo_Courses_course_id" Association="Self.FK_dbo_Exams_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="Exams" EntitySet="Exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_QuestionstChoices_dbo_Courses_course_id" Association="Self.FK_dbo_QuestionstChoices_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="QuestionstChoices" EntitySet="QuestionstChoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_QuestionstTexts_dbo_Courses_course_id" Association="Self.FK_dbo_QuestionstTexts_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="QuestionstTexts" EntitySet="QuestionstTexts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_QuestionstTFs_dbo_Courses_course_id" Association="Self.FK_dbo_QuestionstTFs_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="QuestionstTFs" EntitySet="QuestionstTFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_StudentAnswers_dbo_Courses_course_id" Association="Self.FK_dbo_StudentAnswers_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="StudentAnswers" EntitySet="StudentAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Courses_course_id" Association="Self.FK_dbo_Students_dbo_Courses_course_id">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ExamQuestionsChoices_dbo_Exams_exam_id" Association="Self.FK_dbo_ExamQuestionsChoices_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="ExamQuestionsChoices" EntitySet="ExamQuestionsChoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ExamQuestionsTexts_dbo_Exams_exam_id" Association="Self.FK_dbo_ExamQuestionsTexts_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="ExamQuestionsTexts" EntitySet="ExamQuestionsTexts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ExamQuestionsTFs_dbo_Exams_exam_id" Association="Self.FK_dbo_ExamQuestionsTFs_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="ExamQuestionsTFs" EntitySet="ExamQuestionsTFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Exams_dbo_Instructors_instructor_id" Association="Self.FK_dbo_Exams_dbo_Instructors_instructor_id">
+      <End Role="Instructors" EntitySet="Instructors" />
+      <End Role="Exams" EntitySet="Exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Exams_dbo_Intakes_intake_id" Association="Self.FK_dbo_Exams_dbo_Intakes_intake_id">
+      <End Role="Intakes" EntitySet="Intakes" />
+      <End Role="Exams" EntitySet="Exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Exams_dbo_Tracks_track_id" Association="Self.FK_dbo_Exams_dbo_Tracks_track_id">
+      <End Role="Tracks" EntitySet="Tracks" />
+      <End Role="Exams" EntitySet="Exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_StudentAnswers_dbo_Exams_exam_id" Association="Self.FK_dbo_StudentAnswers_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="StudentAnswers" EntitySet="StudentAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_StudentAnswerSheets_dbo_Exams_exam_id" Association="Self.FK_dbo_StudentAnswerSheets_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="StudentAnswerSheets" EntitySet="StudentAnswerSheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Exams_exam_id" Association="Self.FK_dbo_Students_dbo_Exams_exam_id">
+      <End Role="Exams" EntitySet="Exams" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Intakes_intake_id" Association="Self.FK_dbo_Students_dbo_Intakes_intake_id">
+      <End Role="Intakes" EntitySet="Intakes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_StudentAnswers_dbo_Students_student_id" Association="Self.FK_dbo_StudentAnswers_dbo_Students_student_id">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentAnswers" EntitySet="StudentAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_StudentAnswerSheets_dbo_Students_Student_id" Association="Self.FK_dbo_StudentAnswerSheets_dbo_Students_Student_id">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentAnswerSheets" EntitySet="StudentAnswerSheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Tracks_track_id" Association="Self.FK_dbo_Students_dbo_Tracks_track_id">
+      <End Role="Tracks" EntitySet="Tracks" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

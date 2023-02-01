@@ -1,0 +1,116 @@
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.exe
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.pdb
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.dll
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.exe.config
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.xml
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.AssemblyReference.cache
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_AllStudents_Result.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_logIn.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_studentHomw.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_exam.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init2.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init3.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Properties.Resources.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.GenerateResource.cache
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.CoreCompileInputs.cache
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.CopyComplete
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.exe
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.pdb
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddInstructorToCourse.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchDeleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseDeleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form1.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorDeleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeDaleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.MainUserControl.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentDeleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackDeleteForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackInsertForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackUpdateForm.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddChoiceQ.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddTAndFQ.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddTextQ.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Deleting.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.EditAllQuetions.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UpatingTandFQ.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.updatingChoices.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UpdatingTextQ.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl2.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl3.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl4.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init4.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.instractorform.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.welcomform.resources
+C:\Users\Moussa\source\repos\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Instructor_create_ExamForms.Instructor_dashBooard.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.exe.config
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.exe
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\CSlProjrct_Version1.pdb
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.dll
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.SqlServer.dll
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.xml
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\bin\Debug\EntityFramework.SqlServer.xml
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.AssemblyReference.cache
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.SuggestedBindingRedirects.cache
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_AllStudents_Result.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_logIn.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_studentHomw.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form_exam.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddChoiceQ.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddTAndFQ.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddTextQ.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Deleting.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.EditAllQuetions.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UpatingTandFQ.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.updatingChoices.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UpdatingTextQ.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl2.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl3.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.UserControl4.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.instractorform.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Instructor_create_ExamForms.Instructor_dashBooard.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.welcomform.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.AddInstructorToCourse.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchDeleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.BranchUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseDeleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.CourseUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Form1.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorDeleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.InstructorUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeDaleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.IntakeUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.MainUserControl.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentDeleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.StudentUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackDeleteForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackInsertForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.TrackUpdateForm.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init2.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init3.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Migrations.init4.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.Properties.Resources.resources
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.GenerateResource.cache
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.CoreCompileInputs.cache
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.csproj.CopyComplete
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.exe
+D:\C# project\CSlProjrct_Version1\CSlProjrct_Version1\obj\Debug\CSlProjrct_Version1.pdb
